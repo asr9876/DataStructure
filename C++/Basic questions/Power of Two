@@ -1,0 +1,14 @@
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+   for(int i = 0 ; i <= 30 ; i++){
+       int aws = pow(2,i);
+
+       if(aws == n){
+           return true;
+           }
+       }
+        return false;
+    }
+};
