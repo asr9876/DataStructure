@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        uint32_t aws = n ;
+        int count = 0 ;
+        while(aws != 0){
+            int bit = aws & 1 ;
+            if(bit == 1 ){
+                count++;
+            }
+            aws = aws >> 1; 
+        }
+        return count;
+    }
+};
