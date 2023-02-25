@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool isPowerOfFour(int n) {
+        int aws = 0 ;
+        int i = 0 ;
+        while(aws <= INT_MAX/2){
+            aws = pow( 4 , i );
+            if(aws == n){
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
+};
