@@ -11,10 +11,7 @@ int helper(int a){
 }
 // main function 
 int NCR(int n  , int r){
-    int n1  = helper(n);
-    int r1  = helper(r);
-    int nr = helper(n-r);
-     return n1 / (r1 * nr);
+    return  helper(n) / (helper(r) * helper(n-r));
 }
 int main() {
    int n ,r ;
