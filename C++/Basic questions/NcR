@@ -1,0 +1,28 @@
+
+#include <iostream>
+using namespace std;
+// helper function
+int helper(int a){
+    int a1= a;
+    for(int i = a1 -1  ;i > 0; i--  ){
+        a1 = a1 * i ;
+    }
+    return a1;
+}
+// main function 
+int NCR(int n  , int r){
+    int n1  = helper(n);
+    int r1  = helper(r);
+    int nr = helper(n-r);
+     return n1 / (r1 * nr);
+}
+int main() {
+   int n ,r ;
+   cout<<"Enter the value of n = ";
+   cin>>n ;
+   cout<<"Enter the value of r = ";
+   cin>>r ;
+  int aws = NCR(n , r);
+  cout<<aws;
+    return 0;
+}
