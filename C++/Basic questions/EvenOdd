@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+// a&1 - 1 (odd)
+// a&1 - 0 (even)
+
+bool isOdd(int a){
+    if(a&1){
+        return 0;
+    }
+    return 1;
+}
+
+int main() {
+   int a ;
+   cout<<"Enter the number you want to check = ";
+   cin>>a; 
+   
+   if(isOdd(a)){
+       cout<<"it is even";
+   }else{
+       cout<<"it is odd";
+   }
+
+    return 0;
+}
