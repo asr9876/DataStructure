@@ -1,0 +1,23 @@
+
+#include <iostream>
+using namespace std;
+
+bool checkPrime(int num){
+    for(int i = num - 1 ; i > 1; i-- ){
+        if(num % i == 0 ){
+            return true;
+        }
+    }
+    return false;
+}
+int main() {
+   int num;
+   cin>>num ;
+   if(checkPrime(num)){
+       cout<<"Not prime";
+   }
+   else{
+       cout<<"prime";
+   }
+    return 0;
+}
