@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 // helper function
-int helper(int a){
+int factorial(int a){
     int a1= a;
     for(int i = a1 -1  ;i > 0; i--  ){
         a1 = a1 * i ;
@@ -11,7 +11,7 @@ int helper(int a){
 }
 // main function 
 int NCR(int n  , int r){
-    return  helper(n) / (helper(r) * helper(n-r));
+    return  factorial(n) / (factorial(r) * factorial(n-r));
 }
 int main() {
    int n ,r ;
