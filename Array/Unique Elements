@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std ;
+// UNIQUE ELEMENT 
+int findUnique(int arr[], int size){
+    int num = arr[0];
+    for(int i = 1 ; i < size ; i++){
+            num = num ^ arr[i];
+    }
+    return num;
+}
+int main() {
+    int a[7] = {1,1,2,4,2,3,3};
+    cout<<findUnique(a,7);
+}
