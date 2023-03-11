@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+// FUNCTION DEFINED FOR FINDING PIVOT INDEX IN AN ARRAY
+int pivotIndex(int arr[], int size){
+    int s = 0;
+    int e = size;
+    int mid;
+    while(s < e){
+        mid = (s + e)/2 ;
+        if(arr[mid] >= arr[0]){
+            s = mid + 1; 
+        }
+        else{
+            e = mid;
+        }
+    }return e ;
+}
+int main() {
+   int arr[5] = {7,9,1,2,3};
+   cout<<"Index of pivot element is = "<<pivotIndex(arr,5);
+    return 0;
+}
